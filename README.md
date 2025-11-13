@@ -16,6 +16,16 @@ A lightweight, modern, and **zero-dependency** scroller (marquee) that uses the 
 1.  Link `scroller.min.css` in the `<head>` of your HTML document.
 2.  Link `scroller.min.js` at the end of the `<body>` of your HTML document.
 
+## CDN 
+
+```html
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/AdirDiz/scrollerJS@main/scroller.min.css" />
+```
+
+```html
+<script src="https://cdn.jsdelivr.net/gh/AdirDiz/scrollerJS@main/scroller.min.js"></script>
+```
+
 ## HTML Structure
 
 The basic structure consists of a **parent** (`.scroller`) and a **wrapper** (`.scroller-wrapper`). All your content items must be placed inside the `.scroller-wrapper`.
