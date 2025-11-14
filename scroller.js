@@ -1,4 +1,4 @@
-/*! Scroller by leggo.dev v2.1 */
+/*! Scroller by leggo.dev v2.2 */
 function initMyScroller(selector, config = {}) {
  
   let resizeTimer;
