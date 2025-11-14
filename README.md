@@ -43,23 +43,32 @@ The basic structure consists of a **parent** (`.scroller`) and a **wrapper** (`.
 
 ## 🚀 Initialization (JS)
 
-After including the script, call the initMyScroller function, passing it the selector for your parent (.scroller) and a configuration object.
+Call `initMyScroller` with your base (mobile-first) config, and then add a `breakpoints` object to override settings at different `min-width` values.
 ```JavaScript
 
-// Example: Horizontal scroller with slowdown
+// Example: Horizontal on mobile, Vertical on desktop
 initMyScroller(".my-scroller-demo", {
-  pixelsPerSecond: 100,
-  direction: "left",
-  slowOnHover: true,
-  slowdownFactor: 4
-});
-
-// Example: Vertical scroller with pause
-initMyScroller(".my-vertical-scroller", {
+  
+  // --- BASE (Mobile-first) settings ---
   pixelsPerSecond: 50,
-  direction: "up",
+  direction: "left",
+  gap: 2,
   pauseOnHover: true,
-  removeMask: true // Disables the fade mask
+
+  // --- BREAKPOINTS ---
+  breakpoints: {
+    
+    // (min-width: 768px)
+    768: {
+      direction: "up", // Changes to vertical
+      gap: 1.5
+    },
+    
+    // (min-width: 1024px)
+    1024: {
+      pixelsPerSecond: 100 // Gets faster
+    }
+  }
 });
 ```
 
@@ -75,4 +84,5 @@ initMyScroller(".my-vertical-scroller", {
 | `pauseOnHover` | `Boolean` | `false` | `true`, to pause the animation on hover. |
 | `slowOnHover` | `Boolean` | `false` | `true`, to slow down the animation. (Ignored if `pauseOnHover: true`). |
 | `slowdownFactor` | `Number` | `3` | The factor to slow down by (e.g., 3 = 3x slower). Only works if `slowOnHover: true`. |
+| `breakpoints` | `Object` | `{}` | An object where keys are `min-width` and values are config objects to override. |
 
