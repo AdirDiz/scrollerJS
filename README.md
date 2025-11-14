@@ -19,11 +19,11 @@ A lightweight, modern, and **zero-dependency** scroller (marquee) that uses the 
 ## CDN 
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/AdirDiz/scrollerJS@v2.1/scroller.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/AdirDiz/scrollerJS@v2.2/scroller.min.css" />
 ```
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/AdirDiz/scrollerJS@v2.1/scroller.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/AdirDiz/scrollerJS@v2.2/scroller.min.js"></script>
 ```
 
 ## HTML Structure
